@@ -62,7 +62,7 @@ const DoctorDetail = () => {
         <img src={doctor.image} alt={doctor.name} className="doctor-image" />
         <h2>{doctor.name}</h2>
         <p>{doctor.position}</p>
-        <button className="btn-book">ĐẶT LỊCH HẸN</button>
+        {/* <button className="btn-book">ĐẶT LỊCH HẸN</button> */}
       </div>
 
       <div className="doctor-info">
