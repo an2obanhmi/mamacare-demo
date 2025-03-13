@@ -1,0 +1,116 @@
+.feedback-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: #fdfaf3;
+    border-radius: 10px;
+  }
+  
+  .feedback-info {
+    flex: 1;
+    max-width: 45%;
+  }
+  
+  .feedback-info h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .feedback-info p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .feedback-form {
+    flex: 1;
+    max-width: 50%;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-group {
+    display: flex;
+    gap: 10px;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  textarea {
+    height: 80px;
+    resize: none;
+  }
+  
+  button {
+    background-color: #1db7ad;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #159a9a;
+  }
+  
+  /* Social icons */
+  .social-icons {
+    position: fixed;
+    right: -250px;
+    bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .social-icons a {
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  .call-icon { background-color: #1db7ad; color: white; }
+  .zalo-icon { background-color: #0088cc; color: white; }
+  .messenger-icon { background-color: #0084ff; color: white; }
+  
+  @media (max-width: 768px) {
+    .feedback-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .feedback-info {
+      max-width: 100%;
+    }
+  
+    .feedback-form {
+      max-width: 100%;
+    }
+  
+    .form-group {
+      flex-direction: column;
+    }
+  }
+  

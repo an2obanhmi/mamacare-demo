@@ -60,12 +60,13 @@ const DoctorDetail = () => {
     <div className="doctor-detail-container">
       <div className="doctor-header">
         <img src={doctor.image} alt={doctor.name} className="doctor-image" />
-        <h2>{doctor.name}</h2>
-        <p>{doctor.position}</p>
-        {/* <button className="btn-book">ĐẶT LỊCH HẸN</button> */}
+        <div className="doctor-info-text">
+          <h2>{doctor.name}</h2>
+          <p className="doctor-position">{doctor.position}</p>
+        </div>
       </div>
 
-      <div className="doctor-info">
+      <div className="doctor-experience-certificates">
         <div className="doctor-experience">
           <h3>KINH NGHIỆM LÀM VIỆC</h3>
           <ul>
