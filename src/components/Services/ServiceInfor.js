@@ -18,7 +18,7 @@ const servicesData = {
       'Tăng cường sức đề kháng',
       'Tăng sự gắn kết mẹ và bé',
     ],
-    mediaRecognition: 'Home Care đã nhận được sự quan tâm của nhiều báo chí nổi tiếng như Báo Sức Khỏe Đời Sống, Báo Dân Trí, và nhiều hơn nữa.'
+    mediaRecognition: 'MamaCare đã nhận được sự quan tâm của nhiều báo chí nổi tiếng như Báo Sức Khỏe Đời Sống, Báo Dân Trí, và nhiều hơn nữa.'
   },
   'postpartum-care': {
     name: 'Chăm sóc sau sinh',
@@ -33,7 +33,7 @@ const servicesData = {
       'Giúp mẹ thư giãn, giảm đau sau sinh.',
       'Tăng cường sức khỏe tinh thần và thể chất.',
     ],
-    mediaRecognition: 'Dịch vụ chăm sóc sau sinh của Home Care được nhiều bà mẹ tin tưởng và lựa chọn.'
+    mediaRecognition: 'Dịch vụ chăm sóc sau sinh của MamaCare được nhiều bà mẹ tin tưởng và lựa chọn.'
   },
   'pregnancy-care': {
     name: 'Chăm sóc mẹ bầu',
@@ -47,7 +47,7 @@ const servicesData = {
       'Giúp mẹ bầu giữ tinh thần thoải mái.',
       'Hỗ trợ sức khỏe cho cả mẹ và bé.',
     ],
-    mediaRecognition: 'Dịch vụ chăm sóc mẹ bầu của Home Care giúp mẹ và bé an toàn, khỏe mạnh trong suốt thai kỳ.'
+    mediaRecognition: 'Dịch vụ chăm sóc mẹ bầu của MamaCare giúp mẹ và bé an toàn, khỏe mạnh trong suốt thai kỳ.'
   },
   'milk-duct-treatment': {
     name: 'Chữa tia tắc sữa',
@@ -61,7 +61,7 @@ const servicesData = {
       'Giảm đau và khó chịu cho mẹ.',
       'Giúp bé nhận đủ dinh dưỡng từ sữa mẹ.',
     ],
-    mediaRecognition: 'Dịch vụ chữa tia tắc sữa của Home Care được báo chí đánh giá cao vì tính hiệu quả và sự an toàn cho mẹ và bé.'
+    mediaRecognition: 'Dịch vụ chữa tia tắc sữa của MamaCare được báo chí đánh giá cao vì tính hiệu quả và sự an toàn cho mẹ và bé.'
   }
   // Other services...
 };

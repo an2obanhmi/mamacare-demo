@@ -1,4 +1,3 @@
-// ServiceFeedback.js
 import React, { useState } from "react";
 import "./ServiceFeedback.css";
 
@@ -23,10 +22,38 @@ const ServiceFeedback = () => {
   return (
     <div className="feedback-container">
       <div className="feedback-info">
-        <h2>Nếu bạn đang thắc mắc về dịch vụ hoặc sản phẩm của Home Care, hãy liên hệ chúng mình.</h2>
-        <p><i className="fas fa-phone"></i> 1900 0387 - 0973 871 376</p>
-        <p><i className="fas fa-envelope"></i> cksh@homegroups.vn</p>
+        <h2>
+          Nếu bạn đang thắc mắc về dịch vụ hoặc sản phẩm của MamaCare, hãy liên hệ chúng mình.
+        </h2>
+        <p>
+          <img src="/assets/phone-call-icon.svg" alt="Phone" className="icon" />
+          1900-1900
+        </p>
+        <p>
+          <img src="/assets/envelope-icon.svg" alt="Email" className="icon" />
+          mamacare2025@gmail.com
+        </p>
+
+        <div className="social-icons">
+          <div className="icon-container">
+            <img src="/assets/phone-call-icon.svg" alt="Phone" />
+          </div>
+          <div className="icon-container">
+            <img src="/assets/zalo-icon.svg" alt="Zalo" />
+          </div>
+          <div className="icon-container">
+          <a
+            href="https://www.facebook.com/messages/t/557372944117703"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="icon-container clickable"
+          >
+            <img src="/assets/facebook-messenger-icon.svg" alt="Messenger" />
+            </a>
+          </div>
+        </div>
       </div>
+
       <div className="feedback-form">
         <form onSubmit={handleSubmit}>
           <div className="form-group">
@@ -64,11 +91,6 @@ const ServiceFeedback = () => {
           />
           <button type="submit">Gửi</button>
         </form>
-      </div>
-      <div className="social-icons">
-        <a href="tel:0973871376" className="call-icon"><i className="fas fa-phone"></i></a>
-        <a href="https://zalo.me/0973871376" className="zalo-icon">Zalo</a>
-        <a href="https://m.me/homecaresausinh" className="messenger-icon">Messenger</a>
       </div>
     </div>
   );

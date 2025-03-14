@@ -1,116 +1,169 @@
+/* 🛠 Container chính */
 .feedback-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px;
-    background-color: #fdfaf3;
-    border-radius: 10px;
-  }
-  
-  .feedback-info {
-    flex: 1;
-    max-width: 45%;
-  }
-  
-  .feedback-info h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 15px;
-  }
-  
-  .feedback-info p {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .feedback-form {
-    flex: 1;
-    max-width: 50%;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .form-group {
-    display: flex;
-    gap: 10px;
-  }
-  
-  input, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  textarea {
-    height: 80px;
-    resize: none;
-  }
-  
-  button {
-    background-color: #1db7ad;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  button:hover {
-    background-color: #159a9a;
-  }
-  
-  /* Social icons */
-  .social-icons {
-    position: fixed;
-    right: -250px;
-    bottom: 50px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .social-icons a {
-    background-color: white;
-    padding: 10px;
-    border-radius: 50%;
-    text-align: center;
-    display: block;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
-  }
-  
-  .call-icon { background-color: #1db7ad; color: white; }
-  .zalo-icon { background-color: #0088cc; color: white; }
-  .messenger-icon { background-color: #0084ff; color: white; }
-  
-  @media (max-width: 768px) {
-    .feedback-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background-color: #fdfaf3;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; /* Đảm bảo không bị tràn trên màn hình nhỏ */
+}
+
+/* 🛠 Phần thông tin liên hệ */
+.feedback-info {
+  flex: 1;
+  max-width: 45%;
+}
+
+.feedback-info h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.feedback-info p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Tạo khoảng cách giữa icon và text */
+}
+
+/* 🛠 Định dạng icon (SVG) */
+.feedback-info img.icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain; /* Giúp hình không bị méo */
+}
+
+/* 🛠 Phần form */
+.feedback-form {
+  flex: 1;
+  max-width: 50%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  gap: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  height: 80px;
+  resize: none;
+}
+
+button {
+  background-color: #1db7ad;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #159a9a;
+}
+
+/* 🛠 Social Icons - Chỉ hiển thị, không nhấp được */
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.icon-container {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #f3f3f3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: default; /* Không cho phép nhấp vào */
+  pointer-events: none; /* Vô hiệu hóa click */
+}
+
+.icon-container img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+/* 🛠 Responsive - Fix hiển thị trên màn hình nhỏ */
+@media (max-width: 768px) {
+  .feedback-container {
       flex-direction: column;
       align-items: center;
       text-align: center;
-    }
-  
-    .feedback-info {
-      max-width: 100%;
-    }
-  
-    .feedback-form {
-      max-width: 100%;
-    }
-  
-    .form-group {
-      flex-direction: column;
-    }
   }
-  
+
+  .feedback-info {
+      max-width: 100%;
+  }
+
+  .feedback-form {
+      max-width: 100%;
+  }
+
+  .form-group {
+      flex-direction: column;
+  }
+
+  .social-icons {
+      justify-content: center;
+  }
+}
+/* Social Icons - Căn chỉnh lại */
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+/* Kiểu dáng icon chung */
+.icon-container {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #f3f3f3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: default; /* Mặc định không thể nhấp */
+  pointer-events: none; /* Không cho click */
+}
+
+.icon-container img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+/* Chỉ cho phép Messenger có thể nhấp */
+.clickable {
+  pointer-events: auto;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.clickable:hover {
+  opacity: 0.8;
+}

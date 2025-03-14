@@ -48,56 +48,57 @@ const Infor = () => {
             <h3 className="section-title">Liên kết trên trang</h3>
             <ul className="menu">
               <li>
-                <a href="https://homecaresausinh.com/dich-vu-tam-be/">
-                  Massage tắm bé tại nhà
+                <a href="https://mamacare-demo.vercel.app/service/baby-care/">
+                  Chăm Sóc Bé Tại Nhà
                 </a>
               </li>
               <li>
-                <a href="https://homecaresausinh.com/dich-vu-cham-soc-ba-bau/">
-                  Dịch vụ chăm sóc bà bầu tại nhà
+                <a href="https://mamacare-demo.vercel.app/service/postpartum-care/">
+                  Chăm sóc sau sinh
                 </a>
               </li>
               <li>
-                <a href="https://homecaresausinh.com/dich-vu-thong-tac-tia-sua/">
-                  Dịch vụ thông tắc tia sữa tại nhà
+                <a href="https://mamacare-demo.vercel.app/service/pregnancy-care/">
+                  Chăm sóc mẹ bầu
                 </a>
               </li>
               <li>
-                <a href="https://homecaresausinh.com/dich-vu-cham-soc-sau-sinh/">
-                  Dịch vụ chăm sóc sau sinh tại nhà
+                <a href="https://mamacare-demo.vercel.app/service/milk-duct-treatment/">
+                  Chữa tia tắc sữa
                 </a>
               </li>
             </ul>
 
+            {/* Social Media Icons */}
             <ul className="social-icons">
               <li>
                 <a href="https://www.facebook.com/people/Mamacare-D%E1%BB%8Bch-v%E1%BB%A5-ch%C4%83m-s%C3%B3c-m%E1%BA%B9-sau-sinh/61571516415576/">
                   <img
-                    src="https://homecaresausinh.com/wp-content/uploads/2024/06/facebook.png"
+                    src="/assets/facebook.png"
                     alt="Facebook"
                   />
                 </a>
               </li>
               <li>
-                <a href="https://www.instagram.com/langvanzu/">
+                <a href="/">
                   <img
-                    src="https://homecaresausinh.com/wp-content/uploads/2024/06/instagram.png"
+                    src="/assets/instagram.png"
                     alt="Instagram"
                   />
                 </a>
               </li>
               <li>
-                <a href="https://www.tiktok.com/@homecare.mebesausinh">
+                <a href="/">
                   <img
-                    src="https://homecaresausinh.com/wp-content/uploads/2024/06/tiktok.png"
+                    src="/assets/tiktok.png"
                     alt="TikTok"
                   />
                 </a>
               </li>
               <li>
-                <a href="https://shopee.vn/homecare_official_store">
+                <a href="/">
                   <img
-                    src="https://homecaresausinh.com/wp-content/uploads/2024/06/shopee.png"
+                    src="/assets/shopee.png"
                     alt="Shopee"
                   />
                 </a>

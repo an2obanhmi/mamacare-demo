@@ -37,9 +37,9 @@ function Header() {
                     <li><a href="/about-us">Giới Thiệu</a></li>
                     <li><a href="/services">Dịch Vụ</a></li>
                     <li><a href="/product">Sản Phẩm</a></li>
-                    <li><a href="/resources">Đội Ngũ Bác Sĩ</a></li>
-                    <li><a href="/recruitment">Tuyển Dụng</a></li>
-                    <li><a href="/news">News</a></li>
+                    <li><a href="/resources">Đội Ngũ Chuyên Môn</a></li>
+                    <li><a href="/recruitment">Thông tin</a></li>
+                    <li><a href="/news">Tin Tức</a></li>
                     <li>
                         {user ? (
                             <div className="user-info">
