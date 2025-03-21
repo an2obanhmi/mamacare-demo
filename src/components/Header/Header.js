@@ -38,14 +38,14 @@ function Header() {
                     <li><a href="/services">Dịch Vụ</a></li>
                     <li><a href="/product">Sản Phẩm</a></li>
                     <li><a href="/resources">Đội Ngũ Chuyên Môn</a></li>
-                    <li><a href="/recruitment">Thông tin</a></li>
+                    <li><a href="/coop">Hợp Tác</a></li>
                     <li><a href="/news">Tin Tức</a></li>
                     <li>
                         {user ? (
                             <div className="user-info">
                                 <img src="/assets/user.jpg" alt="User Avatar" className="user-avatar" />
                                 <span>{user.username}</span> 
-                                <button onClick={logout}>Đăng Xuất</button>
+                                <button className='button-logout' onClick={logout}>Đăng Xuất</button>
                             </div>
                         ) : (
                             <a href="/login">Đăng Ký / Đăng Nhập</a>

@@ -1,11 +1,17 @@
-/* Bố cục chính */
+/* Tổng thể trang */
 .resources-wrapper {
   position: relative;
   display: flex;
   justify-content: center;
+  padding: 20px;
+  
+}
+.section-background {
+  background: linear-gradient(to bottom, #ffffff, #f2f4f8);
+  padding: 40px 0;
 }
 
-/* Container chính chứa nội dung */
+/* Container chính */
 .resources-container {
   max-width: 1200px;
   margin: auto;
@@ -13,30 +19,192 @@
   text-align: center;
 }
 
-/* Banner bên trái & phải */
-.banner-left, .banner-right {
-  position: fixed;
-  top: 150px; /* Cách mép trên */
-  width: 150px; /* Kích thước banner */
-  height: 500px;
-  background-size: cover;
-  background-position: center;
-  z-index: 1000;
+/* Tiêu đề */
+.resources-container h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-/* Banner trái */
-.banner-left {
-  left: 20px; /* Cách lề trái */
+.resources-container p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
 }
 
-/* Banner phải */
-.banner-right {
-  right: 20px; /* Cách lề phải */
+/* Grid hiển thị bác sĩ */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-/* Đảm bảo banner ẩn đi trên màn hình nhỏ */
-@media (max-width: 1200px) {
-  .banner-left, .banner-right {
-    display: none;
+/* Card bác sĩ */
+.card {
+  width: 100%;
+  max-width: 320px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Ảnh bác sĩ */
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Nội dung trong card */
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Danh sách bệnh viện */
+.list-unstyled {
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.list-unstyled li {
+  font-size: 13px;
+  color: #777;
+}
+
+/* Thông tin bổ sung */
+.doctor-info {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.doctor-info h6 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.doctor-info ul {
+  padding-left: 20px;
+}
+
+.doctor-info li {
+  font-size: 13px;
+  color: #777;
+}
+
+/* Nút bấm */
+.d-flex {
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Hiệu ứng hover */
+.btn:hover {
+  opacity: 0.8;
+}
+
+
+
+/* Responsive */
+@media (max-width: 992px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
   }
+
+  .card {
+    max-width: 90%;
+  }
+
+}
+/* Container chính cho trang Resources */
+.resources-page {
+  width: 100%;
+}
+
+/* Banner trên cùng */
+.resources-banner {
+  width: 99vw;
+  height: 360px;
+  background: linear-gradient(to right, rgba(82, 137, 194, 1), rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 60%, rgba(82, 137, 194, 1));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.banner-image {
+  height: 100%;
+  object-fit: contain;
+  filter: brightness(95%);
+}
+
+
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 768px) {
+  .resources-banner {
+    height: 50vh; /* Giảm chiều cao banner trên mobile */
+  }
+}
+
+
+.section-divider {
+  width: 80%;
+  height: 5px;
+  background-color: #5289c2; /* Màu chủ đạo */
+  margin: 20px auto;
+  border-radius: 2px;
+}
+
+.resources-banner {
+  width: 99vw;
+  height: 360px;
+  background: linear-gradient(to right, rgba(82, 137, 194, 0.5), white 40%, white 60%, rgba(82, 137, 194, 0.5));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-image {
+  height: 100%;
+  object-fit: contain;
 }

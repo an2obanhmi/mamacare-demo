@@ -9,7 +9,7 @@ import Home from "./components/Home/Home";
 import Services from "./components/Services/Services";
 import AboutUs from "./components/AboutUs/AboutUs";
 import Resource from "./components/Resources/Resources";
-import Recruitment from "./components/Recruitment/Recruitment";
+import Coop from "./components/Coop/Coop";
 import ServiceDetail from "./components/Services/ServiceDetail";
 import ProductDetail from "./components/Product/ProductDetail";
 import Cart from "./components/CartTemp/Cart";
@@ -41,7 +41,7 @@ function App() {
                 <Route path="/services" element={<Services />} />
                 <Route path="/about-us" element={<AboutUs />} />
                 <Route path="/resources" element={<Resource />} />
-                <Route path="/recruitment" element={<Recruitment />} />
+                <Route path="/coop" element={<Coop />} />
                 <Route path="/product" element={<Product />} />
                 <Route path="/service-pay" element={<ServicePay />} />
                 <Route path="/doctor/:doctorId" element={<DoctorDetail />} />

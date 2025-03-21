@@ -1,72 +1,86 @@
+/* 📌 Font chữ Poppins giúp trang nhìn chuyên nghiệp hơn */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 .service-info {
-  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  padding: 40px;
 }
 
-.service-title {
-  font-size: 2em;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.section-title {
-  font-size: 1.5em;
-  color: #33cccc;
-  margin-top: 20px;
-}
-
-.service-description,
-.media-recognition {
-  font-size: 1em;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.service-list {
-  padding-left: 20px;
+/* 📌 Tiêu đề các phần */
+.section-title-infor {
+  font-size: 24px;
+  font-weight: 600;
   margin-bottom: 20px;
+  text-transform: uppercase;
+  text-align: left;
+  color: rgb(82,137,194); /* Màu chủ đạo */
 }
 
-.list-item {
-  font-size: 1em;
-  color: #666;
-}
-
+/* 📌 Bảng giá */
 .pricing-table-section {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .pricing-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.pricing-table th,
-.pricing-table td {
-  padding: 10px;
-  border: 1px solid #ddd;
+.pricing-table thead {
+  background-color: rgb(82,137,194); /* Màu chủ đạo */
+  color: white;
+  font-weight: bold;
+}
+
+.pricing-table th, .pricing-table td {
+  padding: 15px;
   text-align: center;
-}
-
-.pricing-table th {
-  background-color: #5289c2;
-  color: #333;
+  border-bottom: 1px solid #ddd;
 }
 
 .pricing-table td ul {
-  padding-left: 15px;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.pricing-table td ul li {
   text-align: left;
+  padding: 5px 0;
 }
 
+/* 📌 Hover row effect */
+.pricing-table tbody tr:hover {
+  background-color: rgba(82,137,194, 0.1);
+}
+
+/* 📌 Chỉnh lại hàng tiêu đề */
+.pricing-table th {
+  font-size: 18px;
+  padding: 20px;
+  text-transform: uppercase;
+}
+
+/* 📌 Bo góc cho bảng */
+.pricing-table thead tr:first-child th:first-child {
+  border-top-left-radius: 10px;
+}
+
+.pricing-table thead tr:first-child th:last-child {
+  border-top-right-radius: 10px;
+}
+
+/* 📌 Responsive bảng giá */
 @media (max-width: 768px) {
-  .pricing-table,
-  .service-info {
-    font-size: 0.9em;
+  .pricing-table {
+    font-size: 14px;
   }
-
-  .service-title,
-  .section-title {
-    font-size: 1.5em;
+  .pricing-table th, .pricing-table td {
+    padding: 10px;
   }
 }
+

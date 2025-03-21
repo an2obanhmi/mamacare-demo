@@ -61,14 +61,14 @@ function Home() {
       <Slider {...settings}>
         <div>
           <img
-            src="https://homecaresausinh.com/wp-content/uploads/2024/06/4318bcd51129238dfb20cf444855bf2a.jpg"
+            src="/assets/banner-center.jpg"
             alt="Slide 1"
             className="carousel-image"
           />
         </div>
         <div>
           <img
-            src="https://homecaresausinh.com/wp-content/uploads/2024/06/banner_service.jpg"
+            src="/assets/banner-center2.jpg"
             alt="Slide 2"
             className="carousel-image"
           />

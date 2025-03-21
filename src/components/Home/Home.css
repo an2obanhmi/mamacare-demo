@@ -12,7 +12,7 @@
   height: auto; /* Chiều cao tự động, giữ tỉ lệ của ảnh */
   max-height: 100vh; /* Chiều cao tối đa là chiều cao của viewport */
   object-fit: cover; /* Đảm bảo ảnh không bị biến dạng và đầy đủ trong khung */
-  filter: brightness(65%);
+  filter: brightness(90%);
 }
 
 .slick-slider {
