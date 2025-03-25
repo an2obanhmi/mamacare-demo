@@ -1,9 +1,62 @@
 /* ServiceDetail.css */
 
 .service-detail-container {
-  max-width: 1100px;
+  background-color: #f2f2f2;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.service-detail-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.service-detail-header h1 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.service-intro {
+  font-size: 16px;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.service-detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.service-not-found {
+  text-align: center;
+  padding: 100px 0;
+  font-size: 18px;
+  color: #666;
+}
+
+.service-not-found h2 {
+  color: #dc3545;
+  margin-bottom: 20px;
+}
+
+.service-not-found button {
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.service-not-found button:hover {
+  background: #0056b3;
 }
 
 .service-info {
@@ -97,8 +150,12 @@
 }
 
 @media (max-width: 768px) {
-  .service-detail-container {
-    padding: 10px;
+  .service-detail-header h1 {
+    font-size: 28px;
+  }
+  
+  .service-intro {
+    font-size: 15px;
   }
 
   .service-title {

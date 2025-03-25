@@ -1,49 +1,53 @@
 import React from 'react';
-import { Link } from 'react-router-dom';  // Assuming you're using React Router for navigation
+import { Link } from 'react-router-dom';
 import './Services.css';
 
 const Services = () => {
   const services = [
     {
+      id: '1',
       name: 'Chăm Sóc Bé Tại Nhà',
-      image: 'https://homecaresausinh.com/wp-content/uploads/2024/06/img_service1.png',
       description: 'Hãy để bé khỏe mạnh – Thông minh – Phát triển toàn diện ngay từ những năm tháng đầu đời.',
-      type: 'baby-care'
+      image: 'https://homecaresausinh.com/wp-content/uploads/2024/06/img_service1.png'
     },
     {
+      id: '2',
       name: 'Chăm sóc sau sinh',
-      image: 'https://homecaresausinh.com/wp-content/uploads/2024/06/img_service2.png',
       description: 'Sau sinh, sức khỏe của mẹ thay đổi nhanh chóng. Mẹ phải đối mặt với nhiều thay đổi.',
-      type: 'postpartum-care'
+      image: 'https://homecaresausinh.com/wp-content/uploads/2024/06/img_service2.png'
     },
     {
+      id: '3',
       name: 'Chăm sóc mẹ bầu',
-      image: 'https://homecaresausinh.com/wp-content/uploads/2024/06/img_service3.png',
       description: 'Mang thai là giai đoạn nhạy cảm, tinh thần mẹ bầu ảnh hưởng lớn đến sự phát triển của thai nhi.',
-      type: 'pregnancy-care'
+      image: 'https://homecaresausinh.com/wp-content/uploads/2024/06/img_service3.png'
     },
     {
+      id: '4',
       name: 'Chữa tia tắc sữa',
-      image: 'https://homecaresausinh.com/wp-content/uploads/2024/06/img_service4.png',
       description: 'Sữa mẹ là nguồn dinh dưỡng tốt nhất cho trẻ sơ sinh và trẻ nhỏ. Nuôi con bằng sữa mẹ là một lựa chọn tuyệt vời.',
-      type: 'milk-duct-treatment'
-    },
+      image: 'https://homecaresausinh.com/wp-content/uploads/2024/06/img_service4.png'
+    }
   ];
 
   return (
-    <div className="services-page">
-      {/* Service List Section */}
-      <div className="services-section">
-        <h2 className="section-title">Dịch vụ của MamaCare</h2>
-        <div className="services-items">
-          {services.map((service, index) => (
-            <div className="service-item" key={index}>
-              <Link to={`/service/${service.type}`}>
+    <div className="services-container">
+      <div className="services-content">
+        <h2 className="services-title">Dịch vụ của MamaCare</h2>
+        
+        <div className="services-cards">
+          {services.map((service) => (
+            <Link 
+              to={`/services/${service.id}`} 
+              key={service.id} 
+              className="service-card"
+            >
+              <div className="service-icon">
                 <img src={service.image} alt={service.name} />
-                <h3>{service.name}</h3>
-                <p>{service.description}</p>
-              </Link>
-            </div>
+              </div>
+              <h3 className="service-name-item">{service.name}</h3>
+              <p className="service-description-item">{service.description}</p>
+            </Link>
           ))}
         </div>
       </div>

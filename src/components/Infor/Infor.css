@@ -1,4 +1,4 @@
-.container {
+.infor-container-infor {
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -52,11 +52,13 @@
 
 .menu li {
   margin-bottom: 10px;
+  
 }
 
 .menu a {
   text-decoration: none;
   color: rgb(82, 137, 194);
+  text-align: center;
 }
 
 .social-icons {

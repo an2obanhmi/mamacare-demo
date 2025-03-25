@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css'; 
 import ServiceList from '../Services/ServiceList'; // Import ServiceList component
 import ProductList from '../Product/ProductList';
-import Infor from '../Infor/Infor';
+
 function Home() {
   const settings = {
     dots: true,

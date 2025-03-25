@@ -1,71 +1,181 @@
-/* src/components/Login/RegisterPage.css */
-.auth-wrapper {
+/* Thiết kế form đăng ký */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+}
+
+.register-page {
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: #f4f4f4;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
 }
 
-.auth-box {
-    background: white;
-    padding: 2rem;
+.register-container {
+    position: relative;
+    width: 850px;
+    max-width: 90%;
+    min-height: 550px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    display: flex;
+}
+
+/* Panel thông tin bên trái */
+.register-info-container {
+    width: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    padding: 40px;
+}
+
+.register-info {
+    max-width: 320px;
+}
+
+.register-info h1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #fff;
+}
+
+.register-info p {
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.ghost-button {
+    padding: 14px 30px;
+    background: transparent;
+    border: 2px solid white;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 350px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ghost-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
+
+/* Form panel */
+.register-form-container {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-form-container form {
+    width: 100%;
+    max-width: 320px;
+}
+
+.register-form-container h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
     text-align: center;
 }
 
-h2 {
-    margin-bottom: 1rem;
-    color: #333;
-}
-
-.input-group {
-    margin-bottom: 1rem;
-    text-align: left;
-}
-
-.input-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.input-group input {
+.register-form-container input {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.auth-button {
-    width: 100%;
-    background: #28a745; /* Màu xanh lá thay vì xanh dương */
-    color: white;
-    padding: 10px;
+    padding: 15px;
+    margin: 12px 0;
+    background-color: #f6f6f6;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.register-form-container input:focus {
+    background-color: #fff;
+    box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.5);
+    transform: translateY(-2px);
+}
+
+.register-form-container input::placeholder {
+    color: #aaa;
+}
+
+.register-form-container button {
+    width: 100%;
+    padding: 14px 20px;
+    margin-top: 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    outline: none;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
 }
 
-.auth-button:hover {
-    background: #218838;
+.register-form-container button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.6);
 }
 
-.toggle-link {
-    color: #28a745;
-    cursor: pointer;
-    font-weight: bold;
+.register-form-container button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
 }
 
-.toggle-link:hover {
-    text-decoration: underline;
-}
-
-.error-text {
-    color: red;
+.error-message {
+    color: #e74c3c;
+    background-color: rgba(231, 76, 60, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
     font-size: 14px;
-    margin-bottom: 10px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .register-container {
+        flex-direction: column-reverse;
+        height: auto;
+    }
+    
+    .register-form-container {
+        width: 100%;
+        padding: 40px 20px;
+    }
+    
+    .register-info-container {
+        width: 100%;
+        padding: 40px 20px;
+    }
+}
+.fade-transition {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-exit {
+    opacity: 0;
 }

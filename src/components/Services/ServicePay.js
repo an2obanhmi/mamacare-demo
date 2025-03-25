@@ -6,15 +6,15 @@ const API_URL = process.env.REACT_APP_API_URL || "https://mamacare-backend.verce
 
 const pricingData = [
   { title: "Gói Lẻ", price: "300,000 VND" },
-  { title: "Gói Cơ Bản: “Mẹ Tròn Con Vuông”", price: "2,000,000 VND" },
-  { title: "Gói Nâng Cao: “Hồi Phục Toàn Diện”", price: "4,000,000 VND" },
-  { title: "Gói Cao Cấp: “Chăm Sóc Vàng”", price: "6,000,000 VND" },
+  { title: "Gói Cơ Bản: \"Mẹ Tròn Con Vuông\"", price: "2,000,000 VND" },
+  { title: "Gói Nâng Cao: \"Hồi Phục Toàn Diện\"", price: "4,000,000 VND" },
+  { title: "Gói Cao Cấp: \"Chăm Sóc Vàng\"", price: "6,000,000 VND" },
 ];
 
 const ServicePay = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { name, email, phone, message, servicePackage } = location.state || {};
+  const { name, email, phone, message, servicePackage, serviceDetails } = location.state || {};
 
   const [isPaymentConfirmed, setIsPaymentConfirmed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -45,7 +45,9 @@ const ServicePay = () => {
           email,
           phone,
           message: message || "Không có lời nhắn",
-          servicesUse: selectedPackage.title,
+          servicesUse: servicePackage,
+          // Thêm thông tin chi tiết để email đầy đủ hơn
+          serviceDetails: serviceDetails || {}
         }),
       });
 
@@ -77,6 +79,12 @@ const ServicePay = () => {
             <p><strong>Số điện thoại:</strong> {phone}</p>
             <p><strong>Lời nhắn:</strong> {message || "Không có lời nhắn"}</p>
             <p><strong>Gói dịch vụ:</strong> {servicePackage}</p>
+            {serviceDetails && (
+              <div className="service-extra-details">
+                <p><strong>Chi tiết:</strong> {serviceDetails.originalName}</p>
+                <p><strong>Thời gian:</strong> {serviceDetails.duration}</p>
+              </div>
+            )}
           </div>
 
           <div className="servicepay-total">

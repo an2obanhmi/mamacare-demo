@@ -1,8 +1,114 @@
 /* 📌 Font chữ Poppins giúp trang nhìn chuyên nghiệp hơn */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+/* Hiệu ứng Parallax */
+.parallax-section {
+  position: relative;
+  overflow: hidden;
+  padding: 80px 0;
+  background-image: url('https://homecaresausinh.com/wp-content/uploads/2024/06/bg-parallax.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  z-index: 1;
+}
+
+.parallax-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(101, 157, 211, 0.7);
+  z-index: -1;
+}
+
+.parallax-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.parallax-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: inline-block;
+}
+
+.parallax-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: white;
+}
+
+.parallax-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.parallax-cta {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: white;
+  color: rgb(101, 157, 211);
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+}
+
+.parallax-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation cho Parallax */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+/* Phần còn lại của ServiceInfor.css */
 .service-info {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
   padding: 40px;
 }
 
@@ -81,6 +187,332 @@
   }
   .pricing-table th, .pricing-table td {
     padding: 10px;
+  }
+}
+
+.service-info-container {
+  margin-bottom: 40px;
+  color: #333;
+  font-family: 'Poppins', 'Roboto', Arial, sans-serif;
+  line-height: 1.6;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+  animation: fadeUp 0.8s ease-out;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.service-name {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+  font-weight: 700;
+}
+
+.service-name:before {
+  content: "✦";
+  font-size: 1.5rem;
+  color: rgb(101, 157, 211);
+  margin-right: 10px;
+  display: inline-block;
+  animation: pulse 1.5s infinite;
+}
+
+.service-name:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(101,157,211,0.2) 0%, rgba(101,157,211,1) 50%, rgba(101,157,211,0.2) 100%);
+  border-radius: 3px;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.service-description {
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: center;
+  color: #555;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px 20px;
+  position: relative;
+}
+
+.service-description:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background-color: rgba(101, 157, 211, 0.3);
+}
+
+.service-content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.service-challenges,
+.service-benefits,
+.service-testimonials {
+  margin-bottom: 35px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+  border: 1px solid rgba(101, 157, 211, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-challenges:before,
+.service-benefits:before,
+.service-testimonials:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, rgba(101,157,211,0.7) 0%, rgba(101,157,211,1) 50%, rgba(101,157,211,0.7) 100%);
+  border-radius: 5px 5px 0 0;
+}
+
+.service-challenges:hover,
+.service-benefits:hover,
+.service-testimonials:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(101, 157, 211, 0.1);
+  border-color: rgba(101, 157, 211, 0.3);
+}
+
+.service-challenges h3,
+.service-benefits h3,
+.service-testimonials h3 {
+  color: #333;
+  font-size: 1.25rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+  position: relative;
+  padding-left: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.service-challenges h3:before,
+.service-benefits h3:before,
+.service-testimonials h3:before {
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  left: 0;
+  font-weight: 900;
+  color: rgb(101, 157, 211);
+  font-size: 1.2rem;
+}
+
+.service-challenges h3:before {
+  content: "\f682"; /* fa-bath icon */
+}
+
+.service-benefits h3:before {
+  content: "\f004"; /* fa-heart icon */
+}
+
+.service-testimonials h3:before {
+  content: "\f005"; /* fa-star icon */
+}
+
+.service-challenges ul,
+.service-benefits ul {
+  padding-left: 5px;
+  margin-top: 15px;
+  list-style-type: none;
+}
+
+.service-challenges li,
+.service-benefits li {
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 30px;
+  transition: transform 0.2s ease;
+}
+
+.service-challenges li:hover,
+.service-benefits li:hover {
+  transform: translateX(5px);
+}
+
+.service-challenges li:before,
+.service-benefits li:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: rgb(101, 157, 211);
+}
+
+.service-challenges li:before {
+  content: "\f0f1"; /* fa-briefcase-medical */
+}
+
+.service-benefits li:before {
+  content: "\f058"; /* fa-check-circle */
+}
+
+.service-testimonials {
+  background: linear-gradient(to bottom right, #ffffff, #f5f9ff);
+}
+
+.service-testimonials p {
+  line-height: 1.8;
+  color: #555;
+  font-style: italic;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+}
+
+.service-testimonials p:before {
+  content: "\f10d"; /* fa-quote-left */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  color: rgba(101, 157, 211, 0.2);
+  font-size: 1.5rem;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .service-content-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .service-name {
+    font-size: 1.8rem;
+  }
+  
+  .service-challenges h3,
+  .service-benefits h3,
+  .service-testimonials h3 {
+    font-size: 1.2rem;
+  }
+  
+  .parallax-content h2 {
+    font-size: 2rem;
+  }
+  
+  .parallax-content p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-content-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .service-name {
+    font-size: 1.6rem;
+  }
+  
+  .service-challenges,
+  .service-benefits,
+  .service-testimonials {
+    padding: 25px 20px;
+  }
+  
+  .service-challenges h3,
+  .service-benefits h3,
+  .service-testimonials h3 {
+    font-size: 1.1rem;
+  }
+  
+  .parallax-section {
+    padding: 60px 0;
+    background-attachment: scroll; /* Đối với màn hình nhỏ, fixed tạo ra vấn đề hiển thị */
+  }
+  
+  .parallax-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .parallax-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-name {
+    font-size: 1.4rem;
+  }
+  
+  .service-description {
+    font-size: 0.95rem;
+  }
+  
+  .service-challenges h3,
+  .service-benefits h3,
+  .service-testimonials h3 {
+    font-size: 1rem;
+  }
+  
+  .service-challenges,
+  .service-benefits,
+  .service-testimonials {
+    padding: 20px 15px;
+    margin-bottom: 25px;
+  }
+  
+  .service-challenges li,
+  .service-benefits li {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+  }
+  
+  .service-testimonials p {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+  
+  .parallax-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .parallax-cta {
+    padding: 10px 20px;
+    font-size: 0.9rem;
   }
 }
 

@@ -4,7 +4,7 @@ import "./Infor.css"; // Import your CSS styling
 const Infor = () => {
   return (
     <footer className="footer-i">
-      <div className="container">
+      <div className="infor-container-infor">
         <div className="footer-content">
           {/* Company Information */}
           <div className="company-info">
