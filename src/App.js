@@ -24,6 +24,7 @@ import Invoice from "./components/invoice/Invoice";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { AuthProvider } from './contexts/AuthContext';
 
 function AppContent() {
   const location = useLocation();
@@ -68,16 +69,18 @@ function AppContent() {
 
 function App() {
   return (
-    <UserProvider>
-      <CartProvider>
-        <ProductProvider>
-          <Router>
-            <ScrollToTop /> 
-            <AppContent />
-          </Router>
-        </ProductProvider>
-      </CartProvider>
-    </UserProvider>
+    <AuthProvider>
+      <UserProvider>
+        <CartProvider>
+          <ProductProvider>
+            <Router>
+              <ScrollToTop /> 
+              <AppContent />
+            </Router>
+          </ProductProvider>
+        </CartProvider>
+      </UserProvider>
+    </AuthProvider>
   );
 }
 

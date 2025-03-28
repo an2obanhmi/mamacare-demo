@@ -177,3 +177,104 @@
     font-size: 0.9rem;
   }
 }
+
+/* Thêm style cho bảng dịch vụ */
+.service-table {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.service-table th,
+.service-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.service-table th {
+  background-color: #f2f2f2;
+  color: #333;
+  font-weight: bold;
+}
+
+.service-table tr {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Thêm hiệu ứng hover cho hàng */
+.service-table tr:hover {
+  background-color: rgba(82, 137, 194, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Thêm chỉ dẫn nhấp vào */
+.service-table tr:hover::after {
+  content: "Nhấp để đặt dịch vụ →";
+  position: absolute;
+  right: 20px;
+  top: 20%;
+  transform: translateY(-50%);
+  color: #5289C2;
+  font-weight: bold;
+  font-size: 14px;
+  animation: bounce 1s infinite;
+}
+
+/* Thêm nút đặt dịch vụ cho mobile */
+.service-table tr td:last-child::after {
+  content: "Đặt ngay";
+  background-color: #5289C2;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-left: 10px;
+  font-size: 12px;
+  display: none; /* Ẩn mặc định, hiển thị trên mobile */
+}
+
+/* Hiệu ứng nảy cho mũi tên */
+@keyframes bounce {
+  0%, 100% { transform: translateX(0) translateY(-50%); }
+  50% { transform: translateX(10px) translateY(-50%); }
+}
+
+/* Thêm thông báo rõ ràng phía trên bảng */
+.service-booking-instruction {
+  background-color: #f8f9fa;
+  border-left: 4px solid #5289C2;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.service-booking-instruction i {
+  color: #5289C2;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .service-table tr:hover::after {
+    display: none; /* Ẩn chữ "Nhấp để đặt dịch vụ" trên mobile */
+  }
+  
+  .service-table tr td:last-child::after {
+    display: inline-block; /* Hiện nút "Đặt ngay" trên mobile */
+  }
+  
+  .service-table th,
+  .service-table td {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+}

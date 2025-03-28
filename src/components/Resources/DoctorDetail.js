@@ -101,6 +101,46 @@ const doctorData = {
     message:
       "Chúng tôi luôn đồng hành cùng các mẹ để mang đến trải nghiệm chăm sóc tốt nhất.",
   },
+  "le-thi-my-thoa": {
+    name: "Lê Thị Mỹ Thoa",
+    position: "Chuyên viên chăm sóc mẹ và bé",
+    hospitals: ["Làm việc tại trạm y tế xã Phước Sơn"],
+    gallery: [
+      "/assets/gallery1.jpg",
+      "/assets/gallery2.jpg",
+      "/assets/gallery3.jpg",
+      "/assets/gallery4.jpg",
+    ],
+    image: "/assets/LeThiMyThoa.jpg",
+    degrees: [
+     
+      "Chứng chỉ Chăm sóc mẹ và bé",
+      "Bằng cấp: Cao đẳng y tế Bình Định",
+    ],
+    experience: [ "8  năm làm điều dưỡng tại bệnh viện đa khoa huyện Tuy Phước phụ trách bên khoa sản"],
+    message:
+      "Chúng tôi luôn đồng hành cùng các mẹ để mang đến trải nghiệm chăm sóc tốt nhất.",
+  },
+  "nguyen-thi-thu-hong": {
+    name: "Nguyễn Thị Thu Hồng",
+    position: "Chuyên viên chăm sóc mẹ và bé",
+    hospitals: ["Làm việc tại trạm y tế xã Phước Sơn"],
+    gallery: [
+      "/assets/gallery1.jpg",
+      "/assets/gallery2.jpg",
+      "/assets/gallery3.jpg",
+      "/assets/gallery4.jpg",
+    ],
+    image: "/assets/NguyenThiThuHong.jpg",
+    degrees: [
+      "Y sĩ đa khoa",
+      "Chứng chỉ Chăm sóc mẹ và bé",
+      "Bằng cấp: Trung cấp y dược",
+    ],
+    experience: ["Có 10 năm kinh nghiệm chăm sóc mẹ và bé tại nhà"],
+    message:
+      "Chúng tôi luôn đồng hành cùng các mẹ để mang đến trải nghiệm chăm sóc tốt nhất.",
+  },
 };
 
 const DoctorDetail = () => {

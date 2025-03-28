@@ -8,13 +8,12 @@ const doctors = [
   {
     id: "le-thanh-hung",
     name: "ThS. BS. CKII. Lê Thanh Hùng",
-    position: "Bệnh viện Quốc tế Mỹ (Phó khoa Phụ Sản)",
+    position: ["Bệnh viện Quốc tế Mỹ" ,"(Phó khoa Phụ Sản)"],
     hospitals: ["Bệnh viện Từ Dũ", "Bệnh viện FV", "Bệnh viện Tâm Anh"],
     degrees: [
       "Tốt nghiệp Đại học Y Dược TP. Hồ Chí Minh - 1998",
       "Đào tạo chuyên sâu về Sản phụ khoa tại Pháp - 2001",
       "Thạc sĩ ngành Sản phụ khoa - 2004",
-      "Chứng chỉ chuyên sâu về Siêu âm, nội soi Phụ khoa - 2011"
     ],
     experience: ["20 năm kinh nghiệm trong ngành Sản - Phụ khoa"],
     image: "/assets/docter1.jpg",
@@ -54,6 +53,32 @@ const doctors = [
     degrees: ["Y sĩ đa khoa", "Chứng chỉ Chăm sóc mẹ và bé", "Chứng chỉ Nghiệp vụ sư phạm"],
     experience: ["Gần 8 năm kinh nghiệm trong ngành"],
     image: "/assets/DoThiLyVan.jpg",
+  },
+  {
+    id: "le-thi-my-thoa",
+    name: "Lê Thị Mỹ Thoa",
+    position: "Chuyên viên chăm sóc mẹ và bé",
+    hospitals: ["Làm việc tại trạm y tế xã Phước Sơn"],
+    degrees: [
+      "Chứng chỉ Chăm sóc mẹ và bé",
+      " Cao đẳng y tế Bình Định",
+    ],
+    experience: [ "8  năm làm điều dưỡng tại bệnh viện đa khoa huyện Tuy Phước phụ trách bên khoa sản"],
+    image: "/assets/LeThiMyThoa.jpg",
+  },
+  { 
+    id: "nguyen-thi-thu-hong",
+    name: "Nguyễn Thị Thu Hồng",
+    position: "Chuyên viên chăm sóc mẹ và bé",
+    hospitals: ["Làm việc tại trạm y tế xã Phước Sơn"],
+    
+    degrees: [
+      "Y sĩ đa khoa",
+      "Chứng chỉ Chăm sóc mẹ và bé",
+      " Trung cấp y dược",
+    ],
+    experience: ["Có 10 năm kinh nghiệm chăm sóc mẹ và bé tại nhà"],
+    image: "/assets/NguyenThiThuHong.jpg",
   },
 ];
 

@@ -17,6 +17,8 @@
   margin: auto;
   padding: 40px 20px;
   text-align: center;
+  background-color: #f2f3fa;
+  border-radius: 10px;
 }
 
 /* Tiêu đề */
@@ -67,6 +69,7 @@
 /* Nội dung trong card */
 .card-body {
   padding: 15px;
+  height: 400px;
 }
 
 .card-title {
@@ -117,6 +120,11 @@
 .d-flex {
   justify-content: center;
   gap: 10px;
+  width: 250px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .btn {
